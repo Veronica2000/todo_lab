@@ -3,9 +3,11 @@ var app = angular.module('toDoList', []);
 
 app.controller('toDoController', function($scope){
   $scope.items = ['clean house', 'go grocery shopping', ];
-  $scope.addItem=function(){
-  	$scope.toDoList.push($scope.newItem);
-  }
+  
+  $scope.addItem=function(newItem){
+  	$scope.items.push(newItem);
+  	$scope.addItem = "";
+  };
 });
 
   
